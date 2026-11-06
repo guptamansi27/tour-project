@@ -18,6 +18,7 @@ public class Enquiry {
  @Column(nullable=false) public String status="NEW";
  @Column(name="ai_status",nullable=false) public String aiStatus="UNAVAILABLE";
  @Column(name="ai_summary",columnDefinition="text") public String aiSummary;
+ @Transient public String aiError;
  @Column(nullable=false) public String channel="WEBSITE";
  @Column(name="assigned_staff_id") public UUID assignedStaffId;
  @Column(name="created_at",insertable=false,updatable=false) public OffsetDateTime createdAt;
