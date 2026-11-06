@@ -1,0 +1,1 @@
+package in.malabartrails; import org.springframework.data.jpa.repository.JpaRepository;import java.util.*; public interface ItineraryDayRepository extends JpaRepository<ItineraryDay,UUID>{List<ItineraryDay> findByTravelPackageIdOrderByDayNumberAsc(UUID packageId);}

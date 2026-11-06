@@ -1,0 +1,3 @@
+package in.malabartrails;
+import jakarta.persistence.*;import java.time.OffsetDateTime;import java.util.UUID;
+@Entity @Table(name="package_media") public class PackageMedia { @Id @GeneratedValue(strategy=GenerationType.UUID) public UUID id; @Column(name="package_id",nullable=false) public UUID packageId; @Column(name="image_url",nullable=false,columnDefinition="text") public String imageUrl; @Column(name="alt_text") public String altText; @Column(name="sort_order",nullable=false) public int sortOrder; @Column(name="created_at",insertable=false,updatable=false) public OffsetDateTime createdAt; }

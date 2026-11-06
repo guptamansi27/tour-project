@@ -1,0 +1,1 @@
+package in.malabartrails;import org.springframework.data.jpa.repository.JpaRepository;import java.util.*;public interface DestinationRepository extends JpaRepository<Destination,UUID>{List<Destination> findByStatusOrderByNameAsc(String status);Optional<Destination> findBySlugAndStatus(String slug,String status);}

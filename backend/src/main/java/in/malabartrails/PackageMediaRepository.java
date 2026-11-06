@@ -1,0 +1,1 @@
+package in.malabartrails; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface PackageMediaRepository extends JpaRepository<PackageMedia,UUID>{List<PackageMedia> findByPackageIdOrderBySortOrderAsc(UUID packageId);void deleteByPackageId(UUID packageId);}

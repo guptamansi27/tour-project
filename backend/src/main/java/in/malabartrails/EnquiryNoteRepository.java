@@ -1,0 +1,1 @@
+package in.malabartrails; import org.springframework.data.jpa.repository.JpaRepository;import java.util.*; public interface EnquiryNoteRepository extends JpaRepository<EnquiryNote,UUID>{List<EnquiryNote> findByEnquiryIdOrderByCreatedAtDesc(UUID enquiryId);}

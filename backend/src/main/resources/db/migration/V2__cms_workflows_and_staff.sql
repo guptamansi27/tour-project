@@ -1,0 +1,10 @@
+ALTER TABLE staff_users DROP CONSTRAINT IF EXISTS staff_users_role_check;
+ALTER TABLE staff_users ADD CONSTRAINT staff_users_role_check CHECK (role IN ('ADMIN','EDITOR','CONSULTANT'));
+ALTER TABLE travel_packages ADD COLUMN IF NOT EXISTS publish_at TIMESTAMPTZ;
+ALTER TABLE travel_packages ADD COLUMN IF NOT EXISTS published_at TIMESTAMPTZ;
+ALTER TABLE enquiries ADD COLUMN IF NOT EXISTS channel VARCHAR(24) NOT NULL DEFAULT 'WEBSITE';
+ALTER TABLE enquiries ADD COLUMN IF NOT EXISTS assigned_staff_id UUID REFERENCES staff_users(id) ON DELETE SET NULL;
+CREATE TABLE IF NOT EXISTS enquiry_notes(id UUID PRIMARY KEY DEFAULT gen_random_uuid(), enquiry_id UUID NOT NULL REFERENCES enquiries(id) ON DELETE CASCADE, author_email VARCHAR(254) NOT NULL, body TEXT NOT NULL, created_at TIMESTAMPTZ NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS enquiry_activity(id UUID PRIMARY KEY DEFAULT gen_random_uuid(), enquiry_id UUID NOT NULL REFERENCES enquiries(id) ON DELETE CASCADE, actor_email VARCHAR(254), action VARCHAR(80) NOT NULL, detail TEXT, created_at TIMESTAMPTZ NOT NULL DEFAULT now());
+CREATE INDEX IF NOT EXISTS enquiry_notes_enquiry_created_idx ON enquiry_notes(enquiry_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS enquiry_activity_enquiry_created_idx ON enquiry_activity(enquiry_id, created_at DESC);

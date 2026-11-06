@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Kerala hills and backwaters at sunset">
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#d7e3d5"/><stop offset=".57" stop-color="#f0d9ae"/><stop offset="1" stop-color="#b7c6a6"/></linearGradient><linearGradient id="water" x2="0" y2="1"><stop stop-color="#55796b"/><stop offset="1" stop-color="#263f39"/></linearGradient></defs>
+  <path fill="url(#sky)" d="M0 0h1600v900H0z"/><circle cx="1190" cy="230" r="104" fill="#fff0c7" opacity=".8"/>
+  <path fill="#8ba48d" d="m0 470 190-180 176 126 212-228 207 234 183-163 250 205 202-170 180 174v432H0z"/><path fill="#526f5b" d="m0 590 250-174 185 111 273-220 238 199 184-138 253 207 217-167v492H0z"/>
+  <path fill="#315545" d="M0 695q190-155 386-10t402-40q198-160 407 11t405-27v271H0z"/>
+  <path fill="url(#water)" d="M0 719q260-60 511 15t518-12q272-91 571 19v159H0z"/><path fill="#e7d5aa" opacity=".45" d="M870 772q211-31 445 3M1002 813q164-21 307 4M182 785q120-19 253 4" stroke="#ead8b2" stroke-width="8"/>
+  <g fill="#203f34"><path d="m95 695 28-105 28 105zm38 0 35-139 36 139zm85 25 24-97 24 97zM1370 688l30-119 31 119zm50 9 38-151 37 151z"/><path d="M0 729h1600v20H0z"/></g>
+</svg>

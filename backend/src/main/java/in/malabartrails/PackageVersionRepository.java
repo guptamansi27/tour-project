@@ -1,0 +1,1 @@
+package in.malabartrails; import org.springframework.data.jpa.repository.JpaRepository;import java.util.*; public interface PackageVersionRepository extends JpaRepository<PackageVersion,UUID>{List<PackageVersion> findByPackageIdOrderByVersionDesc(UUID packageId);Optional<PackageVersion> findByPackageIdAndVersion(UUID packageId,int version);}
